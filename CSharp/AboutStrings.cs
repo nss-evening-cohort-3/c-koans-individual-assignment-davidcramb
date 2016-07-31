@@ -18,21 +18,21 @@ namespace DotNetKoans.CSharp
         public void DoubleQuotedStringsAreStrings()
         {
             var str = "Hello, World";
-            Assert.Equal(typeof(FillMeIn), str.GetType());
+            Assert.Equal(typeof(string), str.GetType());
         }
 
         [Koan(2)]
         public void SingleQuotedStringsAreNotStrings()
         {
             var str = 'H';
-			Assert.Equal(typeof(FillMeIn), str.GetType());
+			Assert.Equal(typeof(char), str.GetType());
         }
 
         [Koan(3)]
         public void CreateAStringWhichContainsDoubleQuotes()
         {
             var str = "Hello, \"World\"";
-            Assert.Equal(FILL_ME_IN, str.Length);
+            Assert.Equal(14, str.Length);
         }
 
         [Koan(4)]
@@ -41,7 +41,7 @@ namespace DotNetKoans.CSharp
             //The @ symbol creates a 'verbatim string literal'. 
             //Here's one thing you can do with it:
             var str = @"Hello, ""World""";
-            Assert.Equal(FILL_ME_IN, str.Length);
+            Assert.Equal(14, str.Length);
         }
 
         [Koan(5)]
